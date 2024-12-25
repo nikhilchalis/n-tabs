@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Tab URL Viewer",
+    "version": "1.0",
+    "description": "Opens a page showing URLs of all open tabs",
+    "permissions": ["tabs", "activeTab"],
+    "action": {
+        "default_icon": {
+            "16": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["n-tabs.html"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
